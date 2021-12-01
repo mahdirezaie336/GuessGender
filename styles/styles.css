@@ -1,27 +1,33 @@
 html, body {
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: bisque;
 }
 
 .flex-container {
-    height: 100%;
-    padding: 0;
-    margin: 0;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .flex-item {
-    padding: 5px;
-    margin: 10px;
-    line-height: 20px;
     font-weight: bold;
-    text-align: center;
-    background-color: aqua;
+}
+
+#main-container {
+    background-color: lightgray;
+}
+
+#content-container {
+    background-color: burlywood;
 }
 
 .form-item {
     padding: 0.5em;
-    text-align: left;
 }
