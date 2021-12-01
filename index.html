@@ -16,28 +16,34 @@
                         <input type="text">
                     </div>
                     <div class="form-item">
-                        <label>Choose Gender:</label>
+                        <label class="right-margin">Choose Gender:</label>
                         <label>Male</label>
                         <input type="radio" name="gender" value="male">
                         <label>Female</label>
                         <input type="radio" name="gender" value="female">
+                    </div>
+                    <div>
+                        <input type="button" name="submit" value="Submit">
+                        <input type="button" name="save" value="Save">
                     </div>
                 </form>
             </div>
             
             <div class="flex-item">
                 <form>
-                    <h1>Mrs. or Mr.?</h1>
+                    <h1>Prediction</h1>
                     <div class="form-item">
-                        <label>Enter name:</label>
-                        <input type="text">
+                        <label>Predicted Gender:</label>
+                        <label id="gender-predict">NaN</label>
                     </div>
                     <div class="form-item">
-                        <label>Choose Gender:</label>
-                        <label>Male</label>
-                        <input type="radio" name="gender" value="male">
-                        <label>Female</label>
-                        <input type="radio" name="gender" value="female">
+                        <label>Probability:</label>
+                        <label id="gender-probability">NaN</label>
+                    </div>
+                    <div class="form-item">
+                        <label>Saved answer:</label>
+                        <label id="saved-gender">NaN</label>
+                        <input type="button" name="clear" value="Clear">
                     </div>
                 </form>
             </div>

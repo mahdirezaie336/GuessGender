@@ -14,20 +14,25 @@ html, body {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 2em;
+    padding: 1em;
+    border: 1px solid gray;
+    border-radius: 1em;
+    margin: 1em;
 }
 
 .flex-item {
-    font-weight: bold;
+    text-align: center;
 }
 
 #main-container {
     background-color: lightgray;
 }
 
-#content-container {
-    background-color: burlywood;
-}
-
 .form-item {
     padding: 0.5em;
+}
+
+.right-margin {
+    margin-right: 1em;
 }
