@@ -1,11 +1,20 @@
 html {
+    /* Sets backgound image for whole document */
     background-color: bisque;
     background-image: url("../images/bg2.jpg");
     background-size: cover;
 }
 
 html, body {
+    /*  Sets flex layout for the body and the html document, so it can
+        make the context box to the center. By setting html layout to flex
+        we make body to be at center vertically and by setting the body at the
+        center we make the content rectangle to be at the center horizontally.
+        Addionaly we set the height to 100% so that the layout covers whole
+        view port.
+         */
     height: 100%;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,17 +23,21 @@ html, body {
 }
 
 .flex-container {
+
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+
+    /* Setting paddings to the content box. */
     gap: 2em;
     padding: 1em;
+    margin: 1em;
+
+    /* Setting borders to the content box. */
     border: 1px solid gray;
     border-radius: 1em;
-    margin: 1em;
-    opacity: 95%;
 }
 
 .flex-item {
@@ -32,7 +45,8 @@ html, body {
 }
 
 #main-container {
-    background-color: lightgray;
+    background-color: rgb(231, 223, 202);
+    opacity: 95%;
 }
 
 .form-item {
@@ -41,4 +55,22 @@ html, body {
 
 .right-margin {
     margin-right: 1em;
+}
+
+.button {
+    transition-duration: 0.2s;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 0.75em;
+    text-align: center;
+    font-size: 1em;
+}
+
+.button:hover {
+    background-color: #5ec561;
+}
+
+.button:active {
+    background-color: #58865a;
 }

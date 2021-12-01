@@ -4,7 +4,7 @@
         <title>Guess Gender</title>
         <meta charset="UTF-8">
         <link href="styles/styles.css" rel="stylesheet">
-
+        <script src="js/validation.js"></script>
     </head>
     <body>
         <div id="main-container" class="flex-container">
@@ -13,7 +13,7 @@
                     <h1>Mrs. or Mr.?</h1>
                     <div class="form-item">
                         <label>Enter name:</label>
-                        <input type="text">
+                        <input onchange="checkName()" id="name-field" type="text">
                     </div>
                     <div class="form-item">
                         <label class="right-margin">Choose Gender:</label>
@@ -23,8 +23,8 @@
                         <input type="radio" name="gender" value="female">
                     </div>
                     <div>
-                        <input type="button" name="submit" value="Submit">
-                        <input type="button" name="save" value="Save">
+                        <input type="button" name="submit" value="Submit" class="button">
+                        <input type="button" name="save" value="Save" class="button">
                     </div>
                 </form>
             </div>
@@ -43,7 +43,7 @@
                     <div class="form-item">
                         <label>Saved answer:</label>
                         <label id="saved-gender">NaN</label>
-                        <input type="button" name="clear" value="Clear">
+                        <input type="button" name="clear" value="Clear" class="button">
                     </div>
                 </form>
             </div>
