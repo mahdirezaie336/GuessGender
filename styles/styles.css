@@ -9,15 +9,19 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
 }
-.row {
-    width: auto;
-    border: 1px solid blue;
-}
+
 .flex-item {
     padding: 5px;
     margin: 10px;
     line-height: 20px;
     font-weight: bold;
     text-align: center;
+    background-color: aqua;
+}
+
+.form-item {
+    padding: 0.5em;
+    text-align: left;
 }
