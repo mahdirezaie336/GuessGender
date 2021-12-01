@@ -1,13 +1,23 @@
-.container {
-    display: flex;
-    
-    padding: 0;
-    margin: 0;
-
-    justify-content: center;
-    vertical-align: middle;
+html, body {
+    height: 100%;
 }
 
-.form-item {
-    padding: 10px;
+.flex-container {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.row {
+    width: auto;
+    border: 1px solid blue;
+}
+.flex-item {
+    padding: 5px;
+    margin: 10px;
+    line-height: 20px;
+    font-weight: bold;
+    text-align: center;
 }
