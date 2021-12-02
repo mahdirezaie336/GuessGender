@@ -16,7 +16,6 @@
                     <div class="form-item">
                         <label>Enter name:</label>
                         <input pattern="" id="name-field" type="text">
-                        <label id="invalid-name" class="error">Invalid!</label>
                     </div>
                     <div class="form-item">
                         <label class="right-margin">Choose Gender:</label>
@@ -24,10 +23,12 @@
                         <input type="radio" name="gender" value="male">
                         <label>Female</label>
                         <input type="radio" name="gender" value="female">
-                        <label id="invalid-gender" class="error">Choose One</label>
                     </div>
                     <div>
-                        <input onclick="checkName()" type="button" name="submit" value="Submit" class="button">
+                        <label class="error">Error</label>
+                    </div>
+                    <div>
+                        <input id="submit-button" type="button" name="submit" value="Submit" class="button">
                         <input type="button" name="save" value="Save" class="button">
                     </div>
                 </form>
@@ -44,6 +45,9 @@
                     <div class="form-item">
                         <label>Probability:</label>
                         <label id="gender-probability">NaN</label>
+                    </div>
+                    <div>
+                        <label id="result-error" class="error">Error!</label>
                     </div>
                     <div class="form-item">
                         <label>Saved answer:</label>
