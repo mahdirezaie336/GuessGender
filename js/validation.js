@@ -1,9 +1,9 @@
-let name_regex = /[\w\s]/i;
+let name_regex = /[\w\s]+/
 const url_prefix = "https://api.genderize.io/?name=";
 
-function checkName(event)
+function checkName(name)
 {
-    
+    return name_regex.test(name)
 }
 
 function getName()
@@ -14,6 +14,16 @@ function getName()
 function submit(event)
 {
     let name = getName();
+
+    if (!checkName(name))
+    {
+        document.getElementById("form-error").innerHTML = "Invalid input!";
+        document.getElementById("form-error").style.visibility = "visible";
+        return;
+    }
+    else
+        document.getElementById("form-error").style.visibility = "hidden";
+
     fetch(url_prefix + name)
         .then(response => response.json())
         .then((data) => {
@@ -40,9 +50,16 @@ function submit(event)
 function save(event)
 {
     a = document.getElementsByName("gender-radio");
-    let name, gender;
-    // TODO: Name validation
-    name = getName();
+    let gender, name = getName();
+
+    if (!checkName(name))
+    {
+        document.getElementById("form-error").innerHTML = "Invalid input!";
+        document.getElementById("form-error").style.visibility = "visible";
+        return;
+    }
+    else
+        document.getElementById("form-error").style.visibility = "hidden";
 
     if (!a[0].checked && !a[1].checked)
     {
@@ -50,7 +67,12 @@ function save(event)
         if (predicted.toLowerCase() == "male" || predicted.toLowerCase() == "female")
             gender = predicted;
         else
+        {
+            document.getElementById("form-error").innerHTML = "Choose gender or submit.";
+            document.getElementById("form-error").style.visibility = "visible";
             return;
+        }
+        document.getElementById("form-error").style.visibility = "hidden";
     }
     else
     {
