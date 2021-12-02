@@ -24,9 +24,36 @@ function submit(event)
                             document.getElementById('gender-probability').innerHTML = data['probability'];
                         })
     
+    let saved_gender = localStorage.getItem(name);
+    if (saved_gender != null)
+        document.getElementById("saved-gender").innerHTML = saved_gender;
 }
 
 function save(event)
+{
+    a = document.getElementsByName("gender-radio");
+    let name, gender;
+    // TODO: Name validation
+    name = document.getElementById("name-field").value;
+
+    if (!a[0].checked && !a[1].checked)
+    {
+        let predicted = document.getElementById("gender-predict").innerHTML;
+        if (predicted.toLowerCase() == "male" || predicted.toLowerCase() == "female")
+            gender = predicted;
+        else
+            return;
+    }
+    else
+    {
+        gender = a[0].checked ? a[0].value : a[1].value;
+    }
+
+    localStorage.removeItem(name);
+    localStorage.setItem(name, gender);
+}
+
+function clear(event)
 {
 
 }
