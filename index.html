@@ -4,16 +4,19 @@
         <title>Guess Gender</title>
         <meta charset="UTF-8">
         <link href="styles/styles.css" rel="stylesheet">
-        <script src="js/validation.js"></script>
+        <script src="js/validation.js" defer></script>
     </head>
     <body>
+        <!-- The content box code starts here. -->
         <div id="main-container" class="flex-container">
+            <!-- The left side which gets the name and gender as inputs -->
             <div class="flex-item">
                 <form>
                     <h1>Mrs. or Mr.?</h1>
                     <div class="form-item">
                         <label>Enter name:</label>
-                        <input onchange="checkName()" id="name-field" type="text">
+                        <input pattern="" id="name-field" type="text">
+                        <label id="invalid-name" class="error">Invalid!</label>
                     </div>
                     <div class="form-item">
                         <label class="right-margin">Choose Gender:</label>
@@ -21,14 +24,16 @@
                         <input type="radio" name="gender" value="male">
                         <label>Female</label>
                         <input type="radio" name="gender" value="female">
+                        <label id="invalid-gender" class="error">Choose One</label>
                     </div>
                     <div>
-                        <input type="button" name="submit" value="Submit" class="button">
+                        <input onclick="checkName()" type="button" name="submit" value="Submit" class="button">
                         <input type="button" name="save" value="Save" class="button">
                     </div>
                 </form>
             </div>
             
+            <!-- The right side which shows the result -->
             <div class="flex-item">
                 <form>
                     <h1>Prediction</h1>
