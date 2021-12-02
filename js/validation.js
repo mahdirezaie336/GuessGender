@@ -38,6 +38,9 @@ function submit(event)
                             document.getElementById("result-error").style.visibility = "hidden";
                             document.getElementById('gender-predict').innerHTML = data['gender'];
                             document.getElementById('gender-probability').innerHTML = data['probability'];
+                        }).catch((error) => {
+                            document.getElementById("result-error").innerHTML = "Network Error!";
+                            document.getElementById("result-error").style.visibility = 'visible';
                         });
     
     let saved_gender = localStorage.getItem(name);
