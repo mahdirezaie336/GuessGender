@@ -14,13 +14,22 @@ function submit(event)
         .then((data) => {
                             if(data['gender'] == null)
                             {
-                                document.getElementById("prediction-error").style.visibility = 'visible'
+                                document.getElementById('gender-predict').innerHTML = "None";
+                                document.getElementById('gender-probability').innerHTML = "None";
+                                document.getElementById("result-error").style.visibility = 'visible'
                                 return
                             }
+                            document.getElementById("result-error").style.visibility = 'hidden'
                             document.getElementById('gender-predict').innerHTML = data['gender'];
-                            document.getElementById('gender-probability').innerHTML = JSON.stringify(data['probability'])
+                            document.getElementById('gender-probability').innerHTML = data['probability'];
                         })
     
 }
 
+function save(event)
+{
+
+}
+
 document.getElementById("submit-button").onclick = submit;
+document.getElementById("save-button").onclick = save;

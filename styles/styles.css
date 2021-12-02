@@ -78,6 +78,6 @@ html, body {
 
 .error {
     color: red;
-    font-size: 0.7em;
+    font-size: 1em;
     visibility: hidden;
 }
