@@ -55,8 +55,11 @@ function save(event)
 
 function clear(event)
 {
-
+    let name = document.getElementById("name-field").value;
+    localStorage.removeItem(name);
+    document.getElementById("saved-gender").innerHTML = "None";
 }
 
 document.getElementById("submit-button").onclick = submit;
 document.getElementById("save-button").onclick = save;
+document.getElementById("clear-button").onclick = clear;
