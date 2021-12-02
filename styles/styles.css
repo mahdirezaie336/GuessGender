@@ -41,42 +41,56 @@ html, body {
 }
 
 .flex-item {
+    /* Setting the flex items alignment to center */
     text-align: center;
 }
 
 #main-container {
+    /* Some extra styles for the main container */
     background-color: rgb(231, 223, 202);
     opacity: 95%;
 }
 
 .form-item {
+    /* Paddings for form items */
     padding: 0.75em;
 }
 
 .right-margin {
+    /* Right margin for a "Choose Gender:" label */
     margin-right: 1em;
 }
 
 .button {
+    /* Changing style of the buttons to flat and green */
+    /* Setting animation effect for button color change */
     transition-duration: 0.2s;
-    background-color: #4CAF50; /* Green */
-    border: none;
+
+    /* Button colors */
+    background-color: #4CAF50;
     color: white;
+
+    /* Button paddings */
+    border: none;
     padding: 0.75em;
+    margin-top: 1em;
+
     text-align: center;
     font-size: 1em;
-    margin-top: 1em;
 }
 
 .button:hover {
+    /* When mouse gets over a button */
     background-color: #5ec561;
 }
 
 .button:active {
+    /* When click is pressed on a button */
     background-color: #58865a;
 }
 
 .error {
+    /* Style for error expression like "Not found!" */
     color: red;
     font-size: 1em;
     visibility: hidden;
